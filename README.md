@@ -20,33 +20,35 @@ Design a UART (Universal Asynchronous Receiver-Transmitter) receiver using VHDL,
 
 **Key Points:**
 
-Entity Declaration: Define the UART receiver entity with input clock, input serial data, output data valid, and output received byte signals.
+1.Entity Declaration: Define the UART receiver entity with input clock, input serial data, output data valid, and output received byte signals.
 
-State Machine: Implement a finite state machine (FSM) with five states: idle, start bit detection, data bits reception, stop bit detection, and cleanup.
+2.State Machine: Implement a finite state machine (FSM) with five states: idle, start bit detection, data bits reception, stop bit detection, and cleanup.
 
-Signal Declarations: Declare signals for the current state, clock counter, bit index, received byte, and data valid.
+3.Signal Declarations: Declare signals for the current state, clock counter, bit index, received byte, and data valid.
 
-Process: Describe the behavior of the FSM using a VHDL process, which includes:
+4.Process: Describe the behavior of the FSM using a VHDL process, which includes:
 
-Start bit detection and timing
+5.Start bit detection and timing
 
-Data bits reception and storage
+6.Data bits reception and storage
 
-Stop bit detection and validation
+7.Stop bit detection and validation
 
-Cleanup and preparation for next reception
+8.Cleanup and preparation for next reception
 
-**Output Assignments**: Assign the output signals data valid and received byte the values of the corresponding internal signals.
+**Output Assignments**: 
 
-Clock Synchronization: Use the input clock signal to synchronize the FSM and ensure proper timing.
+1.Assign the output signals data valid and received byte the values of the corresponding internal signals.
 
-Bit Indexing: Use the bit index signal to keep track of the current bit position during data reception.
+2.Clock Synchronization: Use the input clock signal to synchronize the FSM and ensure proper timing.
 
-Data Validation: Use the stop bit detection and validation to ensure the received data is valid.
+3.Bit Indexing: Use the bit index signal to keep track of the current bit position during data reception.
 
-This is a VHDL implementation of a UART (Universal Asynchronous Receiver-Transmitter) receiver. Here's a breakdown of the code:
+4.Data Validation: Use the stop bit detection and validation to ensure the received data is valid.
 
-Entity Declaration
+5.This is a VHDL implementation of a UART (Universal Asynchronous Receiver-Transmitter) receiver. Here's a breakdown of the code:
+
+6.Entity Declaration
 
 **The entity UART_RX has four ports:**
 
